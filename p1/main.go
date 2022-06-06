@@ -15,7 +15,7 @@ type Block struct {
 	Data     []byte
 	PrevHash []byte
 }
-
+//function receiver sets a method [DeriveHash()] on variables[b *Block which will store an address of the type]
 func (b *Block) DeriveHash() {
 	info := bytes.Join([][]byte{b.Data, b.PrevHash}, []byte{})
 	hash := sha256.Sum256(info)
